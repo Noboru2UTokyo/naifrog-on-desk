@@ -182,3 +182,6 @@ clawd-emoji-final/
 !scripts/retime-naifrog-idle.py
 
 !docs/releases/release-v1.3.3.md
+
+!docs/releases/release-v1.4.0.md
+!scripts/import-naifrog-reviewed.py

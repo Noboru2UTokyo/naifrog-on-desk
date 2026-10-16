@@ -1,0 +1,61 @@
+/* Naifrog distribution palette. Keep warning/error and agent identity colors. */
+:root {
+  --bg: #fff9e8;
+  --panel-bg: #fffef9;
+  --surface: #fffef9;
+  --surface-alt: #f4edcf;
+  --sidebar-bg: #f4edcf;
+  --sidebar-active: #f2c94c;
+  --sidebar-active-text: #3e3523;
+  --text: #3e3523;
+  --text-primary: #3e3523;
+  --text-secondary: #776d55;
+  --text-muted: #776d55;
+  --muted: #776d55;
+  --accent: #588044;
+  --accent-hover: #456734;
+  --switch-on: #f2c94c;
+  --switch-knob: #fffef9;
+  --card-bg: #fffef9;
+  --header-color: #3e3523;
+  --cmd-bg: #f6efd9;
+  --cmd-color: #3e3523;
+  --hud-bg: rgba(255, 249, 232, .96);
+  --running: #588044;
+  --done: #588044;
+  --naifrog-yellow: #f2c94c;
+  --naifrog-yellow-hover: #e5b934;
+}
+.btn-primary, .btn.primary, .btn-allow {
+  background: var(--naifrog-yellow);
+  border-color: var(--naifrog-yellow);
+  color: #3e3523;
+}
+.btn-primary:hover:not(:disabled), .btn.primary:hover:not(:disabled), .btn-allow:hover:not(:disabled) {
+  background: var(--naifrog-yellow-hover);
+  border-color: var(--naifrog-yellow-hover);
+  color: #3e3523;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #27261f;
+    --panel-bg: #333128;
+    --surface: #333128;
+    --surface-alt: #2d2c23;
+    --sidebar-bg: #2d2c23;
+    --text: #f8f0d9;
+    --text-primary: #f8f0d9;
+    --text-secondary: #c2b89d;
+    --text-muted: #c2b89d;
+    --muted: #c2b89d;
+    --accent: #9dbf7c;
+    --accent-hover: #b0ce92;
+    --card-bg: #333128;
+    --header-color: #f8f0d9;
+    --cmd-bg: #27261f;
+    --cmd-color: #f8f0d9;
+    --hud-bg: rgba(45, 44, 35, .96);
+    --running: #9dbf7c;
+    --done: #9dbf7c;
+  }
+}

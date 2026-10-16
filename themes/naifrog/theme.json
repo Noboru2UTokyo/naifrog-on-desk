@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "name": "奶蛙 · 大笑伙伴",
   "author": "Naifrog Desktop Pet",
-  "version": "1.3.3",
-  "description": "黄色奶蛙：原片惊鸿一瞥待机、爬行漫游、托腮思考、打字／翻资料／记笔记／电话／汇报／盖章六种自然工作动作与 12 秒大笑。保留 Permission 确认笑声，优化透明边缘。",
+  "version": "1.4.0",
+  "description": "保留惊鸿一瞥和 12 秒大笑；按会话数量循环打字、上一版耳机和施工，原图托腮，趴睡及连续入睡／醒来，空闲吹泡泡。取消杂耍和爬行，保留原音效。",
   "viewBox": {
     "x": 0,
     "y": 0,
@@ -48,7 +48,7 @@
       "working.webp"
     ],
     "juggling": [
-      "working.webp"
+      "work-headphones.webp"
     ],
     "attention": [
       "happy.webp"
@@ -65,17 +65,18 @@
     "sweeping": [
       "working.webp"
     ],
-    "roam": [
-      "roam.webp"
-    ],
+    "roam": {
+      "files": [],
+      "fallbackTo": "idle"
+    },
     "yawning": [
       "yawning.webp"
     ],
     "dozing": [
-      "dozing.webp"
+      "sleeping.webp"
     ],
     "collapsing": [
-      "collapsing.webp"
+      "sleeping.webp"
     ],
     "sleeping": [
       "sleeping.webp"
@@ -90,6 +91,14 @@
   "roamFlipAssets": false,
   "workingTiers": [
     {
+      "minSessions": 3,
+      "file": "work-building.webp"
+    },
+    {
+      "minSessions": 2,
+      "file": "work-headphones.webp"
+    },
+    {
       "minSessions": 1,
       "file": "working.webp"
     }
@@ -99,19 +108,24 @@
     "clawd-working-debugger.svg": "work-notes.webp",
     "clawd-working-thinking.svg": "thinking.webp"
   },
-  "idleAnimations": [],
+  "idleAnimations": [
+    {
+      "file": "bubble.webp",
+      "duration": 8000
+    }
+  ],
   "hitBoxes": {
     "default": {
       "x": 210,
-      "y": 101,
-      "w": 232,
-      "h": 467
+      "y": 100,
+      "w": 233,
+      "h": 469
     },
     "sleeping": {
-      "x": 83,
-      "y": 319,
-      "w": 457,
-      "h": 249
+      "x": 67,
+      "y": 364,
+      "w": 506,
+      "h": 204
     },
     "wide": {
       "x": 75,
@@ -121,64 +135,58 @@
     }
   },
   "fileHitBoxes": {
-    "collapsing.webp": {
-      "x": 83,
-      "y": 311,
-      "w": 474,
-      "h": 257
-    },
-    "dozing.webp": {
-      "x": 83,
-      "y": 310,
-      "w": 474,
-      "h": 258
+    "bubble.webp": {
+      "x": 132,
+      "y": 153,
+      "w": 377,
+      "h": 415
     },
     "happy.webp": {
       "x": 116,
       "y": 77,
       "w": 353,
-      "h": 491
+      "h": 492
     },
     "idle.webp": {
       "x": 210,
-      "y": 101,
-      "w": 232,
-      "h": 467
-    },
-    "roam.webp": {
-      "x": 82,
-      "y": 306,
-      "w": 476,
-      "h": 262
+      "y": 100,
+      "w": 233,
+      "h": 469
     },
     "sleeping.webp": {
-      "x": 83,
-      "y": 319,
-      "w": 457,
-      "h": 249
+      "x": 67,
+      "y": 364,
+      "w": 506,
+      "h": 204
     },
     "thinking.webp": {
-      "x": 205,
-      "y": 101,
-      "w": 230,
-      "h": 467
+      "x": 193,
+      "y": 100,
+      "w": 253,
+      "h": 468
     },
     "waking.webp": {
-      "x": 83,
-      "y": 306,
-      "w": 474,
-      "h": 263
+      "x": 52,
+      "y": 87,
+      "w": 538,
+      "h": 506
+    },
+    "work-building.webp": {
+      "x": 141,
+      "y": 32,
+      "w": 358,
+      "h": 536
+    },
+    "work-headphones.webp": {
+      "x": 192,
+      "y": 72,
+      "w": 257,
+      "h": 496
     },
     "work-notes.webp": {
       "x": 147,
       "y": 101,
       "w": 297,
-      "h": 467
-    },
-    "work-phone.webp": {
-      "x": 204,
-      "y": 101,
-      "w": 232,
       "h": 468
     },
     "work-reading.webp": {
@@ -187,104 +195,70 @@
       "w": 277,
       "h": 467
     },
-    "work-report.webp": {
-      "x": 193,
-      "y": 99,
-      "w": 245,
-      "h": 470
-    },
-    "work-stamp.webp": {
-      "x": 146,
-      "y": 98,
-      "w": 300,
-      "h": 470
-    },
-    "work-typing.webp": {
-      "x": 152,
-      "y": 102,
-      "w": 291,
-      "h": 466
-    },
     "working.webp": {
-      "x": 146,
-      "y": 98,
-      "w": 300,
-      "h": 471
+      "x": 132,
+      "y": 178,
+      "w": 376,
+      "h": 391
     },
     "yawning.webp": {
-      "x": 83,
-      "y": 306,
-      "w": 474,
-      "h": 263
+      "x": 52,
+      "y": 87,
+      "w": 538,
+      "h": 509
     }
   },
   "sleepingHitboxFiles": [
     "sleeping.webp"
   ],
   "transitions": {
-    "work-report.webp": {
-      "in": 180,
-      "out": 180
-    },
-    "dozing.webp": {
-      "in": 70,
-      "out": 70
-    },
-    "work-notes.webp": {
-      "in": 180,
-      "out": 180
-    },
-    "sleeping.webp": {
-      "in": 70,
-      "out": 70
-    },
-    "idle.webp": {
-      "in": 180,
-      "out": 180
-    },
-    "work-typing.webp": {
-      "in": 180,
-      "out": 180
-    },
-    "yawning.webp": {
-      "in": 70,
-      "out": 70
-    },
-    "collapsing.webp": {
-      "in": 70,
-      "out": 70
-    },
-    "thinking.webp": {
-      "in": 180,
-      "out": 180
-    },
-    "work-stamp.webp": {
-      "in": 180,
-      "out": 180
-    },
-    "working.webp": {
-      "in": 180,
-      "out": 180
-    },
-    "roam.webp": {
-      "in": 180,
-      "out": 180
-    },
-    "waking.webp": {
-      "in": 180,
-      "out": 180
+    "bubble.webp": {
+      "in": 140,
+      "out": 140
     },
     "happy.webp": {
-      "in": 180,
-      "out": 180
+      "in": 140,
+      "out": 140
     },
-    "work-phone.webp": {
-      "in": 180,
-      "out": 180
+    "idle.webp": {
+      "in": 140,
+      "out": 140
+    },
+    "sleeping.webp": {
+      "in": 0,
+      "out": 0
+    },
+    "thinking.webp": {
+      "in": 140,
+      "out": 140
+    },
+    "waking.webp": {
+      "in": 0,
+      "out": 0
+    },
+    "work-building.webp": {
+      "in": 140,
+      "out": 140
+    },
+    "work-headphones.webp": {
+      "in": 140,
+      "out": 140
+    },
+    "work-notes.webp": {
+      "in": 140,
+      "out": 140
     },
     "work-reading.webp": {
-      "in": 180,
-      "out": 180
+      "in": 140,
+      "out": 140
+    },
+    "working.webp": {
+      "in": 140,
+      "out": 140
+    },
+    "yawning.webp": {
+      "in": 0,
+      "out": 0
     }
   },
   "reactions": {
@@ -294,7 +268,7 @@
     },
     "clickRight": {
       "file": "thinking.webp",
-      "duration": 4000
+      "duration": 6417
     },
     "double": {
       "files": [
@@ -311,9 +285,9 @@
     "confirm": "confirm.mp3"
   },
   "timings": {
-    "yawnDuration": 584,
-    "collapseDuration": 3250,
-    "wakeDuration": 3834,
+    "yawnDuration": 8000,
+    "collapseDuration": 1,
+    "wakeDuration": 8000,
     "deepSleepTimeout": 90000,
     "mouseIdleTimeout": 20000,
     "mouseSleepTimeout": 60000,
@@ -343,8 +317,8 @@
         "to": "working-poster.png"
       },
       "juggling": {
-        "from": "working.webp",
-        "to": "working-poster.png"
+        "from": "work-headphones.webp",
+        "to": "work-headphones-poster.png"
       },
       "attention": {
         "from": "happy.webp",
@@ -366,21 +340,17 @@
         "from": "working.webp",
         "to": "working-poster.png"
       },
-      "roam": {
-        "from": "roam.webp",
-        "to": "roam-poster.png"
-      },
       "yawning": {
         "from": "yawning.webp",
         "to": "yawning-poster.png"
       },
       "dozing": {
-        "from": "dozing.webp",
-        "to": "dozing-poster.png"
+        "from": "sleeping.webp",
+        "to": "sleeping-poster.png"
       },
       "collapsing": {
-        "from": "collapsing.webp",
-        "to": "collapsing-poster.png"
+        "from": "sleeping.webp",
+        "to": "sleeping-poster.png"
       },
       "sleeping": {
         "from": "sleeping.webp",
@@ -391,5 +361,11 @@
         "to": "waking-poster.png"
       }
     }
-  }
+  },
+  "jugglingTiers": [
+    {
+      "minSessions": 1,
+      "file": "work-headphones.webp"
+    }
+  ]
 }

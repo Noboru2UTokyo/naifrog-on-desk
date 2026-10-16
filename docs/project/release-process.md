@@ -642,3 +642,11 @@ Naifrog fork, based on the released upstream v1.3.0 code. Release tag `v1.3.3`.
 - Verify all other animation, poster and sound bytes are unchanged from v1.3.2.
 - Run the fork checks in NAIFROG.md, including packaged native smoke, theme contents and signature integrity.
 - Keep GUI/update-pair/platform checks recorded separately; ad-hoc signature integrity does not imply notarization.
+
+### v1.4.0 Naifrog Smoke Checklist
+
+- Run the fork checks in NAIFROG.md and verify package/theme version 1.4.0.
+- Verify approved asset hashes, work tiers, all subagent counts using previous headphones, no crawling file and 8-second sleep entry/wake timings.
+- Keep original idle, 12-second laughter and sounds unchanged.
+- Confirm yellow/green application surfaces and the local running theme.
+- Mount the actual DMG, audit native files, run the packaged Koffi call and verify ad-hoc signature integrity; notarization remains unavailable.

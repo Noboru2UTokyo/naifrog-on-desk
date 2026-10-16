@@ -5,7 +5,7 @@
 - Upstream: rullerzhou-afk/clawd-on-desk, v1.3.0 (54d359ef).
 - Distribution branch: codex/naifrog-edition. Keep main available for upstream synchronization.
 - Package/bundle: naifrog-on-desk / io.github.noboru2utokyo.naifrog-on-desk.
-- Application and theme versions: 1.3.3.
+- Application and theme versions: 1.4.0.
 - The first-run preference is naifrog. Existing selected themes are preserved.
 - Published assets and updater endpoints belong only to Noboru2UTokyo/naifrog-on-desk.
 - Internal upstream hook markers and ~/.clawd are intentionally retained. Run only one edition at a time.
@@ -43,3 +43,7 @@ python3 scripts/retime-naifrog-idle.py --input assets/source/naifrog/idle-glance
 ```
 
 The provenance report is retained at assets/source/naifrog/idle-pingpong.json. Other animations, sounds and the character proportions are unchanged from 1.3.2.
+
+## Approved animations in 1.4.0
+
+Import only user-approved review WebP/poster files with `python3 scripts/import-naifrog-reviewed.py /path/to/review --version 1.4.0`. The review selection must authorize publication and have no pending acceptance. `themes/naifrog/approved-assets.json` records byte hashes, durations and runtime bindings without private source paths or generation requests. Working tiers are typing / previous headphones / building; subagents always use headphones. Sleep entry runs once for 8 seconds, dozing/collapsing/sleeping share the prone loop, waking runs for 8 seconds. The one-millisecond collapsing handoff prevents a second entry replay. Roam falls back to idle; fresh profiles keep freeRoam=false. Existing settings are preserved; disabling roam on an existing profile is an explicit user choice. The distribution palette is isolated in src/naifrog-palette.css.

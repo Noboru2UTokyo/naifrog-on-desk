@@ -1,0 +1,95 @@
+{
+  "version": "1.4.0",
+  "approval": "User accepted the local review and authorized local/GitHub release.",
+  "reviewRevision": "user-selection-v4",
+  "assets": [
+    {
+      "candidate": "idle-retained",
+      "file": "idle.webp",
+      "sha256": "3b523f08a7c3fbae1bba5c6ec50e276216e0e2dab3c2a564a96bd932926ed2a9",
+      "frames": 47,
+      "durationMs": 6000,
+      "loop": true
+    },
+    {
+      "candidate": "happy-retained",
+      "file": "happy.webp",
+      "sha256": "0757a2b4a68de0805f2d1a974b79395ac1a0db756ffee695ef7a2470859d89c1",
+      "frames": 259,
+      "durationMs": 12000,
+      "loop": false
+    },
+    {
+      "candidate": "building-pose-v5",
+      "file": "work-building.webp",
+      "sha256": "9299ea8d5e17533270dcc4f8212b3dc74f0ed9dd25d4e73093b761bf109a3869",
+      "frames": 73,
+      "durationMs": 3042,
+      "loop": true
+    },
+    {
+      "candidate": "typing-pose-v3",
+      "file": "working.webp",
+      "sha256": "7c393ee6ffbc7c2de34174984a024c0cb5f2a0503dfd0ba4d028075f67af41b3",
+      "frames": 121,
+      "durationMs": 5042,
+      "loop": true
+    },
+    {
+      "candidate": "headphones-v1",
+      "file": "work-headphones.webp",
+      "sha256": "6f8925b53fa112d3e5901c287d040eec62f4dcdc2252d08e5b9a9aaac71b1995",
+      "frames": 98,
+      "durationMs": 4083,
+      "loop": true
+    },
+    {
+      "candidate": "thinking-reference-v5",
+      "file": "thinking.webp",
+      "sha256": "1f8c27e15a862447a741c49e7c62e12677240609d6b23c8589c840ace584ff1c",
+      "frames": 154,
+      "durationMs": 6417,
+      "loop": true
+    },
+    {
+      "candidate": "sleep-pose-v3",
+      "file": "sleeping.webp",
+      "sha256": "3b9ef400743526be522ba56442be6f9c80206f23899434dc757824a80afb88f2",
+      "frames": 113,
+      "durationMs": 4708,
+      "loop": true
+    },
+    {
+      "candidate": "bubble-pose-v3",
+      "file": "bubble.webp",
+      "sha256": "046d3413af9b0bf673674fd82b2a95600f3845cd0de6237eb3e3c3ebeb345f02",
+      "frames": 192,
+      "durationMs": 8000,
+      "loop": false
+    },
+    {
+      "candidate": "sleep-down-pose-v3",
+      "file": "yawning.webp",
+      "sha256": "007a1e58180cd732078034304f17b6e47992166682c9584d0c8a68408870bcb5",
+      "frames": 192,
+      "durationMs": 8000,
+      "loop": false
+    },
+    {
+      "candidate": "wake-pose-v3",
+      "file": "waking.webp",
+      "sha256": "2f8032c4914790c905ad63b415199b2e62d79778d023b750ffd3468ee9cc81ef",
+      "frames": 192,
+      "durationMs": 8000,
+      "loop": false
+    }
+  ],
+  "removedAnimations": [
+    "juggling",
+    "roam"
+  ],
+  "workRotation": "repeat until upstream state or tier changes",
+  "subagents": "headphones at every count",
+  "sleepMapping": "yawning=entry; dozing/collapsing/sleeping=prone; waking=rise; no second entry replay",
+  "generator": "Full MiniMax H3, 1440x1440, 24fps; retained idle/laugh unchanged"
+}

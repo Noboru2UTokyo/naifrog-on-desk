@@ -31,7 +31,7 @@ function visit(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){con
 visit(sourceTheme);
 for(const file of files) assert.deepEqual(fs.readFileSync(path.join(packedTheme,file)),fs.readFileSync(path.join(sourceTheme,file)),file);
 const manifest=JSON.parse(fs.readFileSync(path.join(packedTheme,'theme.json')));
-assert.equal(manifest.version,'1.3.3');
+assert.equal(manifest.version,pkg.version);
 assert.deepEqual(manifest.states.idle,['idle.webp']);
 assert.equal(manifest.sounds.confirm,'confirm.mp3');
 assert.equal(manifest.timings.minDisplay.attention,12000);
