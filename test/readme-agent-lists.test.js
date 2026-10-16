@@ -25,7 +25,7 @@ function supportAgents(file) {
 }
 
 test("README agent support lists track the English product names", () => {
-  const english = supportAgents("README.md");
+  const english = supportAgents("README.upstream.md");
   for (const file of localizedReadmes) {
     const translated = supportAgents(file);
     assert.deepStrictEqual([...translated].sort(), [...english].sort(), `${file}: agent support list differs from English`);

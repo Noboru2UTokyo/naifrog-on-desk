@@ -7,9 +7,11 @@ const vm = require("node:vm");
 const test = require("node:test");
 
 const ROOT = path.join(__dirname, "..");
-const TABLE_READMES = ["README.md", "README.ko-KR.md", "README.ja-JP.md", "README.es.md"];
+// The fork landing page links to the preserved upstream README.
+// Localized contributor grids include the additional distribution maintainer.
+const TABLE_READMES = [ "README.ko-KR.md", "README.ja-JP.md", "README.es.md"];
 const ALL_READMES = [
-  "README.md",
+  "README.upstream.md",
   "README.zh-CN.md",
   "README.zh-TW.md",
   "README.ko-KR.md",
@@ -190,6 +192,10 @@ test("table-based README contributor grids are filled consistently", () => {
 });
 
 test("README contributor sections stay visible", () => {
+  const landing = fs.readFileSync(path.join(ROOT, "README.md"), "utf8");
+  assert.match(landing, /\[README\.upstream\.md\]\(README\.upstream\.md\)/);
+  assert.match(landing, /https:\/\/github\.com\/Noboru2UTokyo/);
+  assert.match(landing, /https:\/\/github\.com\/rullerzhou-afk\/clawd-on-desk/);
   for (const filename of ALL_READMES) {
     const markdown = fs.readFileSync(path.join(ROOT, filename), "utf8");
     const section = extractContributorSection(markdown, filename);
@@ -219,6 +225,10 @@ test("all README contributor lists exactly match Settings About", () => {
     const markdown = fs.readFileSync(path.join(ROOT, filename), "utf8");
     const actual = extractContributorLogins(markdown, filename);
     assert.strictEqual(new Set(actual).size, actual.length, `${filename} should not contain duplicate contributors`);
-    assert.deepStrictEqual(actual.slice().sort(), expected.slice().sort(), `${filename} contributors should match Settings About`);
+    // Preserve the original upstream snapshot without attributing this fork to it.
+    const credited = filename === "README.upstream.md"
+      ? expected.filter((name) => name !== require("../package.json").author.name)
+      : expected;
+    assert.deepStrictEqual(actual.slice().sort(), credited.slice().sort(), `${filename} contributors should match Settings About`);
   }
 });
