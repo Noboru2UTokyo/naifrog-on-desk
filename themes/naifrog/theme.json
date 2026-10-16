@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "奶蛙 · 大笑伙伴",
   "author": "Naifrog Desktop Pet",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "黄色奶蛙：原片惊鸿一瞥待机、爬行漫游、托腮思考、打字／翻资料／记笔记／电话／汇报／盖章六种自然工作动作与 12 秒大笑。保留 Permission 确认笑声，优化透明边缘。",
   "viewBox": {
     "x": 0,
@@ -222,47 +222,27 @@
     "sleeping.webp"
   ],
   "transitions": {
-    "working.webp": {
+    "work-report.webp": {
       "in": 180,
       "out": 180
-    },
-    "collapsing.webp": {
-      "in": 70,
-      "out": 70
     },
     "dozing.webp": {
       "in": 70,
       "out": 70
     },
-    "work-typing.webp": {
+    "work-notes.webp": {
       "in": 180,
       "out": 180
+    },
+    "sleeping.webp": {
+      "in": 70,
+      "out": 70
     },
     "idle.webp": {
       "in": 180,
       "out": 180
     },
-    "work-phone.webp": {
-      "in": 180,
-      "out": 180
-    },
-    "work-stamp.webp": {
-      "in": 180,
-      "out": 180
-    },
-    "work-report.webp": {
-      "in": 180,
-      "out": 180
-    },
-    "waking.webp": {
-      "in": 180,
-      "out": 180
-    },
-    "work-reading.webp": {
-      "in": 180,
-      "out": 180
-    },
-    "work-notes.webp": {
+    "work-typing.webp": {
       "in": 180,
       "out": 180
     },
@@ -270,11 +250,19 @@
       "in": 70,
       "out": 70
     },
-    "happy.webp": {
+    "collapsing.webp": {
+      "in": 70,
+      "out": 70
+    },
+    "thinking.webp": {
       "in": 180,
       "out": 180
     },
-    "thinking.webp": {
+    "work-stamp.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "working.webp": {
       "in": 180,
       "out": 180
     },
@@ -282,9 +270,21 @@
       "in": 180,
       "out": 180
     },
-    "sleeping.webp": {
-      "in": 70,
-      "out": 70
+    "waking.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "happy.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "work-phone.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "work-reading.webp": {
+      "in": 180,
+      "out": 180
     }
   },
   "reactions": {

@@ -1,6 +1,6 @@
 {
   "name": "naifrog-on-desk",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Naifrog edition of Clawd on Desk, with the animated milk frog built in.",
   "main": "src/main.js",
   "scripts": {

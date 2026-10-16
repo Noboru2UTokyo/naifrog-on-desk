@@ -5,7 +5,7 @@
 - Upstream: rullerzhou-afk/clawd-on-desk, v1.3.0 (54d359ef).
 - Distribution branch: codex/naifrog-edition. Keep main available for upstream synchronization.
 - Package/bundle: naifrog-on-desk / io.github.noboru2utokyo.naifrog-on-desk.
-- Application and theme versions: 1.3.2.
+- Application and theme versions: 1.3.3.
 - The first-run preference is naifrog. Existing selected themes are preserved.
 - Published assets and updater endpoints belong only to Noboru2UTokyo/naifrog-on-desk.
 - Internal upstream hook markers and ~/.clawd are intentionally retained. Run only one edition at a time.
@@ -34,12 +34,12 @@ The fork asset budget is explicitly raised from 64 MiB to 105 MiB (warning at 90
 
 The initial fork also updates markdown-it to 15.0.3 and the lockfile resolutions for js-yaml to 4.3.2 and qs to 6.16.1. These compatible fixes address the production dependency audit findings in GHSA-253c-mchw-3w2r, GHSA-2883-xcg3-v3hh and GHSA-4mjr-xmp4-gh2g. No forced major-version update is applied.
 
-## Idle loop in 1.3.2
+## Idle loop in 1.3.3
 
-The approved 1.3.1 idle source is retained in assets/source/naifrog/idle-glance-v1.3.1.webp. Its first 24 frames are the source glance; later frames are the old dissolve. scripts/retime-naifrog-idle.py uses Pillow to write the sequence 0..23,22..1 at 46 frames / 2000 ms, without duplicate endpoints, hold frames or blending. Lossless encoding preserves every visible pixel and alpha value from the approved frames. The script asserts source identity, timing, frame order and decoded pixel equality. Reproduce with:
+The approved 1.3.1 idle source is retained in assets/source/naifrog/idle-glance-v1.3.1.webp. Its first 24 frames are the source glance; later frames are the old dissolve. scripts/retime-naifrog-idle.py uses Pillow to write the sequence 0..23,22..0 at 47 frames / 6000 ms. The phases are 1000 ms forward, an exact 2000 ms glance hold, 1000 ms reverse, and an exact 2000 ms neutral-pose rest. The wrap joins identical neutral poses; no blending is used. Lossless encoding preserves every visible pixel and alpha value from the approved frames. The script asserts source identity, phase timing, both 2000 ms holds, frame order and decoded pixel equality. Reproduce with:
 
 ```sh
 python3 scripts/retime-naifrog-idle.py --input assets/source/naifrog/idle-glance-v1.3.1.webp --output themes/naifrog/assets/idle.webp --report /tmp/idle-pingpong.json
 ```
 
-The provenance report is retained at assets/source/naifrog/idle-pingpong.json. Other animations, sounds and the character proportions are unchanged from 1.3.1.
+The provenance report is retained at assets/source/naifrog/idle-pingpong.json. Other animations, sounds and the character proportions are unchanged from 1.3.2.

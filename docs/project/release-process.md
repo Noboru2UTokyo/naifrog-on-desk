@@ -630,3 +630,15 @@ Naifrog fork, based on the released upstream v1.3.0 code. Release tag `v1.3.2`.
 - Verify all other animation and sound bytes are unchanged from v1.3.1.
 - Run the fork checks in NAIFROG.md, including packaged native smoke, theme contents and signature integrity.
 - Keep GUI/update-pair/platform checks recorded separately; ad-hoc signature integrity does not imply notarization.
+
+
+### v1.3.3 Draft Smoke Checklist
+
+Naifrog fork, based on the released upstream v1.3.0 code. Release tag `v1.3.3`.
+
+- Confirm the packaged app shows `1.3.3` metadata and Settings → About shows `v1.3.3`.
+- Verify the fresh-install default theme is bundled naifrog 1.3.3 and an existing saved theme choice persists.
+- Verify the idle animation has 47 frames over 6000 ms: 1000 ms forward, 2000 ms glance hold, 1000 ms reverse, 2000 ms neutral rest. Check both held poses and the identical neutral-pose wrap.
+- Verify all other animation, poster and sound bytes are unchanged from v1.3.2.
+- Run the fork checks in NAIFROG.md, including packaged native smoke, theme contents and signature integrity.
+- Keep GUI/update-pair/platform checks recorded separately; ad-hoc signature integrity does not imply notarization.
