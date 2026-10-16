@@ -26,12 +26,16 @@
   --naifrog-yellow: #f2c94c;
   --naifrog-yellow-hover: #e5b934;
 }
-.btn-primary, .btn.primary, .btn-allow {
+.sidebar-item.active:hover:not(.disabled) {
+  background: var(--sidebar-active);
+  color: var(--sidebar-active-text);
+}
+.btn-primary, .btn.primary, .btn-allow, .about-check-update-btn {
   background: var(--naifrog-yellow);
   border-color: var(--naifrog-yellow);
   color: #3e3523;
 }
-.btn-primary:hover:not(:disabled), .btn.primary:hover:not(:disabled), .btn-allow:hover:not(:disabled) {
+.btn-primary:hover:not(:disabled), .btn.primary:hover:not(:disabled), .btn-allow:hover:not(:disabled), .about-check-update-btn:hover:not(:disabled) {
   background: var(--naifrog-yellow-hover);
   border-color: var(--naifrog-yellow-hover);
   color: #3e3523;
