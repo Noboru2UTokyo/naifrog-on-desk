@@ -16,7 +16,7 @@ const PACKAGED_ICON_ASSETS = [
   "assets/tray-icon-flash.png",
 ];
 const LOCALIZED_READMES = [
-  "README.md",
+  "README.upstream.md",
   "README.zh-CN.md",
   "README.zh-TW.md",
   "README.ko-KR.md",
