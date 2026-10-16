@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "奶蛙 · 大笑伙伴",
   "author": "Naifrog Desktop Pet",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "黄色奶蛙：原片惊鸿一瞥待机、爬行漫游、托腮思考、打字／翻资料／记笔记／电话／汇报／盖章六种自然工作动作与 12 秒大笑。保留 Permission 确认笑声，优化透明边缘。",
   "viewBox": {
     "x": 0,
@@ -222,31 +222,11 @@
     "sleeping.webp"
   ],
   "transitions": {
-    "waking.webp": {
-      "in": 180,
-      "out": 180
-    },
-    "thinking.webp": {
-      "in": 180,
-      "out": 180
-    },
-    "happy.webp": {
-      "in": 180,
-      "out": 180
-    },
-    "collapsing.webp": {
-      "in": 70,
-      "out": 70
-    },
     "working.webp": {
       "in": 180,
       "out": 180
     },
-    "work-phone.webp": {
-      "in": 180,
-      "out": 180
-    },
-    "yawning.webp": {
+    "collapsing.webp": {
       "in": 70,
       "out": 70
     },
@@ -262,7 +242,7 @@
       "in": 180,
       "out": 180
     },
-    "work-reading.webp": {
+    "work-phone.webp": {
       "in": 180,
       "out": 180
     },
@@ -270,21 +250,41 @@
       "in": 180,
       "out": 180
     },
-    "roam.webp": {
+    "work-report.webp": {
       "in": 180,
       "out": 180
     },
-    "work-report.webp": {
+    "waking.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "work-reading.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "work-notes.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "yawning.webp": {
+      "in": 70,
+      "out": 70
+    },
+    "happy.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "thinking.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "roam.webp": {
       "in": 180,
       "out": 180
     },
     "sleeping.webp": {
       "in": 70,
       "out": 70
-    },
-    "work-notes.webp": {
-      "in": 180,
-      "out": 180
     }
   },
   "reactions": {

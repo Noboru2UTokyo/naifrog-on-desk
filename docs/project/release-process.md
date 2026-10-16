@@ -618,3 +618,15 @@ This fork uses the separate flow in [NAIFROG.md](../../NAIFROG.md); the upstream
 - Run full tests, theme validation, asset audit, target-native inventory, packaged Koffi call and Naifrog package verification.
 - Mount the actual DMG, verify its contents and ad-hoc signature integrity. Record that Apple notarization and Gatekeeper acceptance are not provided.
 - Record actual GUI, external agent and update-pair coverage without inferring it from static checks.
+
+
+### v1.3.2 Draft Smoke Checklist
+
+Naifrog fork, based on the released upstream v1.3.0 code. Release tag `v1.3.2`.
+
+- Confirm the packaged app shows `1.3.2` metadata and Settings → About shows `v1.3.2`.
+- Verify the fresh-install default theme is bundled naifrog 1.3.2 and an existing saved theme choice persists.
+- Verify the idle animation has 46 frames over 2000 ms, plays forward then backward without duplicate endpoints, and preserves the approved source pixels.
+- Verify all other animation and sound bytes are unchanged from v1.3.1.
+- Run the fork checks in NAIFROG.md, including packaged native smoke, theme contents and signature integrity.
+- Keep GUI/update-pair/platform checks recorded separately; ad-hoc signature integrity does not imply notarization.

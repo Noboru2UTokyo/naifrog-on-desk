@@ -177,3 +177,6 @@ clawd-emoji-final/
 # Naifrog distribution release documentation and checks
 !docs/releases/release-v1.3.1.md
 !scripts/verify-naifrog-package.js
+
+!docs/releases/release-v1.3.2.md
+!scripts/retime-naifrog-idle.py

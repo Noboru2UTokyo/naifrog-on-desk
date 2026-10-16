@@ -17,7 +17,7 @@ test('fresh profiles select the complete bundled Naifrog theme; saved choices pe
     loader.init(path.join(__dirname, '../src'), dir);
     const theme = loader.loadTheme(fresh.theme, {strict:true});
     assert.equal(theme._id, 'naifrog');
-    assert.equal(theme.version, '1.3.1');
+    assert.equal(theme.version, '1.3.2');
     assert.deepEqual(theme.states.idle, ['idle.webp']);
     assert.equal(theme.timings.minDisplay.attention,12000);
     assert.equal(theme.sounds.confirm,'confirm.mp3');

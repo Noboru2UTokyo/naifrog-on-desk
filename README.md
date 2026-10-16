@@ -2,13 +2,13 @@
 
 开机就是奶蛙的 Clawd on Desk 分支，内置已完成的奶蛙主题，无需单独导入素材或配置生成 API。
 
-基于 [rullerzhou-afk/clawd-on-desk](https://github.com/rullerzhou-afk/clawd-on-desk) **v1.3.0**；当前应用版本 **1.3.1**，主题版本 **1.3.1**。保留上游多种 AI coding agent 状态感知与设置功能。
+基于 [rullerzhou-afk/clawd-on-desk](https://github.com/rullerzhou-afk/clawd-on-desk) **v1.3.0**；当前应用版本 **1.3.2**，主题版本 **1.3.2**。保留上游多种 AI coding agent 状态感知与设置功能。
 
 <p align="center"><img src="themes/naifrog/assets/idle.webp" alt="奶蛙惊鸿一瞥待机" width="300"></p>
 
 ## 下载与安装
 
-在 [Releases](https://github.com/Noboru2UTokyo/naifrog-on-desk/releases) 下载 `Naifrog-on-Desk-1.3.1-arm64.dmg`，适用于 Apple Silicon Mac（M1/M2/M3/M4 等）。打开 DMG，把 **Naifrog on Desk.app** 拖到 Applications，再启动。首次启动直接显示奶蛙。
+在 [Releases](https://github.com/Noboru2UTokyo/naifrog-on-desk/releases) 下载 `Naifrog-on-Desk-1.3.2-arm64.dmg`，适用于 Apple Silicon Mac（M1/M2/M3/M4 等）。打开 DMG，把 **Naifrog on Desk.app** 拖到 Applications，再启动。首次启动直接显示奶蛙。
 
 首版为 **ad-hoc 签名、未做 Apple 公证** 的构建。首次打开如被 macOS 拦截，请核对下载来源与 SHA256，再按系统「隐私与安全性」的提示自行决定是否打开；本项目不关闭 Gatekeeper。其他系统和架构是否可用，以该 Release 实际列出的文件及验证说明为准。
 
@@ -16,7 +16,7 @@
 
 ## 奶蛙的小动作
 
-- 待机：你指定的原片「惊鸿一瞥」，4 秒循环。
+- 待机：你指定的原片「惊鸿一瞥」，正放后倒放，2 秒往返循环。
 - 思考：托腮、抱臂，按原设定保留身体比例。
 - 工作：打字、翻资料、记笔记、电话、汇报、盖章，32 秒轮换。
 - 完成／点击反应：原片大笑 12 秒。
