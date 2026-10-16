@@ -504,7 +504,7 @@ describe("updater visual flow", () => {
     assert.deepStrictEqual(visualStates, ["checking", null]);
     assert.ok(appliedStates.includes("error"));
     assert.deepStrictEqual(requests, [
-      "api.github.com/repos/rullerzhou-afk/clawd-on-desk/releases/latest",
+      "api.github.com/repos/Noboru2UTokyo/naifrog-on-desk/releases/latest",
     ]);
     assert.deepStrictEqual(bubbles.map((bubble) => bubble.mode), ["checking", "error"]);
     assert.match(bubbles[1].detail, /Code: NETWORK_OFFLINE/);
@@ -533,7 +533,7 @@ describe("updater visual flow", () => {
         {
           statusCode: 302,
           headers: {
-            location: "https://github.com/rullerzhou-afk/clawd-on-desk/releases/tag/v0.5.10",
+            location: "https://github.com/Noboru2UTokyo/naifrog-on-desk/releases/tag/v0.5.10",
           },
         },
       ], requests),
@@ -542,8 +542,8 @@ describe("updater visual flow", () => {
     await updater.checkForUpdates(true);
 
     assert.deepStrictEqual(requests, [
-      "api.github.com/repos/rullerzhou-afk/clawd-on-desk/releases/latest",
-      "github.com/rullerzhou-afk/clawd-on-desk/releases/latest",
+      "api.github.com/repos/Noboru2UTokyo/naifrog-on-desk/releases/latest",
+      "github.com/Noboru2UTokyo/naifrog-on-desk/releases/latest",
     ]);
     assert.deepStrictEqual(bubbles.map((bubble) => bubble.mode), ["checking", "up-to-date"]);
   });
@@ -581,7 +581,7 @@ describe("updater visual flow", () => {
         {
           statusCode: 302,
           headers: {
-            location: "https://github.com/rullerzhou-afk/clawd-on-desk/releases/tag/v0.5.11",
+            location: "https://github.com/Noboru2UTokyo/naifrog-on-desk/releases/tag/v0.5.11",
           },
         },
       ], requests),
@@ -593,8 +593,8 @@ describe("updater visual flow", () => {
 
     assert.strictEqual(updateChecks, 1);
     assert.deepStrictEqual(requests, [
-      "api.github.com/repos/rullerzhou-afk/clawd-on-desk/releases/latest",
-      "github.com/rullerzhou-afk/clawd-on-desk/releases/latest",
+      "api.github.com/repos/Noboru2UTokyo/naifrog-on-desk/releases/latest",
+      "github.com/Noboru2UTokyo/naifrog-on-desk/releases/latest",
     ]);
     assert.deepStrictEqual(bubbles.map((bubble) => bubble.mode), ["checking", "available"]);
   });
@@ -623,8 +623,8 @@ describe("updater visual flow", () => {
     await updater.checkForUpdates(true);
 
     assert.deepStrictEqual(requests, [
-      "api.github.com/repos/rullerzhou-afk/clawd-on-desk/releases/latest",
-      "github.com/rullerzhou-afk/clawd-on-desk/releases/latest",
+      "api.github.com/repos/Noboru2UTokyo/naifrog-on-desk/releases/latest",
+      "github.com/Noboru2UTokyo/naifrog-on-desk/releases/latest",
     ]);
     assert.deepStrictEqual(bubbles.map((bubble) => bubble.mode), ["checking", "error"]);
     assert.match(bubbles[1].detail, /GitHub releases redirect returned 200/);
@@ -645,7 +645,7 @@ describe("updater visual flow", () => {
     await updater.checkForUpdates(true);
 
     assert.deepStrictEqual(requests, [
-      "api.github.com/repos/rullerzhou-afk/clawd-on-desk/releases/latest",
+      "api.github.com/repos/Noboru2UTokyo/naifrog-on-desk/releases/latest",
     ]);
     assert.deepStrictEqual(bubbles.map((bubble) => bubble.mode), ["checking", "error"]);
     assert.match(bubbles[1].detail, /Code: UNKNOWN/);
@@ -942,7 +942,7 @@ describe("updater visual flow", () => {
         {
           statusCode: 302,
           headers: {
-            location: "https://github.com/rullerzhou-afk/clawd-on-desk/releases/tag/v0.6.1",
+            location: "https://github.com/Noboru2UTokyo/naifrog-on-desk/releases/tag/v0.6.1",
           },
         },
       ], requests),
@@ -951,8 +951,8 @@ describe("updater visual flow", () => {
     await updater.checkForUpdates(true);
 
     assert.deepStrictEqual(requests, [
-      "api.github.com/repos/rullerzhou-afk/clawd-on-desk/releases/latest",
-      "github.com/rullerzhou-afk/clawd-on-desk/releases/latest",
+      "api.github.com/repos/Noboru2UTokyo/naifrog-on-desk/releases/latest",
+      "github.com/Noboru2UTokyo/naifrog-on-desk/releases/latest",
     ]);
     assert.deepStrictEqual(openedUrls, []);
     assert.deepStrictEqual(bubbles.map((bubble) => bubble.mode), ["checking", "up-to-date"]);
@@ -1004,7 +1004,7 @@ describe("updater visual flow", () => {
         {
           statusCode: 302,
           headers: {
-            location: "https://github.com/rullerzhou-afk/clawd-on-desk/releases/tag/v0.6.1",
+            location: "https://github.com/Noboru2UTokyo/naifrog-on-desk/releases/tag/v0.6.1",
           },
         },
       ], requests),
@@ -1014,8 +1014,8 @@ describe("updater visual flow", () => {
 
     assert.strictEqual(updateChecks, 1);
     assert.deepStrictEqual(requests, [
-      "api.github.com/repos/rullerzhou-afk/clawd-on-desk/releases/latest",
-      "github.com/rullerzhou-afk/clawd-on-desk/releases/latest",
+      "api.github.com/repos/Noboru2UTokyo/naifrog-on-desk/releases/latest",
+      "github.com/Noboru2UTokyo/naifrog-on-desk/releases/latest",
     ]);
     assert.deepStrictEqual(openedUrls, []);
     assert.deepStrictEqual(bubbles.map((bubble) => bubble.mode), ["checking"]);

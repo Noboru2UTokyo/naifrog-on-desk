@@ -29,14 +29,15 @@ test("main wires clawd:// protocol dispatch through the Codex Pet importer", () 
   assert.ok(runtimeSource.includes('setThemeSelection", { themeId: generated.themeId }'));
 });
 
-test("package metadata registers the clawd protocol and exposes dev registration", () => {
+test("fork retains import dispatch without claiming upstream protocol ownership", () => {
   const pkg = JSON.parse(fs.readFileSync(PACKAGE_JSON, "utf8"));
   const launchSource = fs.readFileSync(LAUNCH, "utf8");
   const sharedProcessSource = fs.readFileSync(SHARED_PROCESS, "utf8");
   const protocols = (((pkg || {}).build || {}).protocols || []);
 
   assert.ok(pkg.scripts["register-protocol:dev"].includes("--register-protocol"));
-  assert.ok(protocols.some((entry) => Array.isArray(entry.schemes) && entry.schemes.includes("clawd")));
+  assert.deepStrictEqual(protocols, []);
+  assert.ok(fs.readFileSync(CODEX_PET_MAIN,"utf8").includes('if (require("../package.json").name === "naifrog-on-desk") return false;'));
   assert.ok(launchSource.includes("process.argv.slice(2)"));
   assert.ok(launchSource.includes("buildElectronLaunchConfig(__dirname, { forwardedArgs })"));
   assert.ok(sharedProcessSource.includes("...forwardedArgs"));

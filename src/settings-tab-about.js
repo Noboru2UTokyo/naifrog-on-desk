@@ -305,7 +305,7 @@
 
     const title = document.createElement("h2");
     title.className = "about-title";
-    title.textContent = "Clawd on Desk";
+    title.textContent = "Naifrog on Desk · 奶蛙版";
 
     const tagline = document.createElement("p");
     tagline.className = "about-tagline";

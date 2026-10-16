@@ -606,3 +606,15 @@ explicitly; do not replace it with a mutable major-version tag.
   version by hand.
 - After the catalog refreshes, run an independent Windows `winget install` or
   `winget upgrade` smoke test before documenting the command in the READMEs.
+
+## Naifrog distribution
+
+### v1.3.1 Draft Smoke Checklist
+
+This fork uses the separate flow in [NAIFROG.md](../../NAIFROG.md); the upstream policy above remains unchanged.
+
+- Confirm the packaged app shows `1.3.1` metadata and Settings → About shows `v1.3.1`.
+- Verify the fresh-install default theme is bundled naifrog 1.3.1 and an existing saved theme choice persists.
+- Run full tests, theme validation, asset audit, target-native inventory, packaged Koffi call and Naifrog package verification.
+- Mount the actual DMG, verify its contents and ad-hoc signature integrity. Record that Apple notarization and Gatekeeper acceptance are not provided.
+- Record actual GUI, external agent and update-pair coverage without inferring it from static checks.

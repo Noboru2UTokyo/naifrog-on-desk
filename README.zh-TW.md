@@ -375,6 +375,8 @@ Clawd on Desk 是社群驅動的專案。歡迎提 Bug、提需求、提 PR —�
 <a href="https://github.com/LetitiaChan"><img src="https://github.com/LetitiaChan.png" width="50" style="border-radius:50%" /></a>
 <a href="https://github.com/sanzanazaman"><img src="https://github.com/sanzanazaman.png" width="50" style="border-radius:50%" /></a>
 
+<a href="https://github.com/Noboru2UTokyo"><img src="https://github.com/Noboru2UTokyo.png" width="50" style="border-radius:50%" /><br /><sub>Noboru2UTokyo</sub></a>
+
 ## 致謝
 
 - Clawd 像素畫參考自 [clawd-tank](https://github.com/marciogranzotto/clawd-tank) by [@marciogranzotto](https://github.com/marciogranzotto)

@@ -5879,7 +5879,7 @@ if (!gotTheLock) {
     installStartupDockIcon({
       dock: app.dock,
       showDock: _settingsController.get("showDock") !== false,
-      dockIconPath: path.join(__dirname, "..", "assets", "dock-icon.png"),
+      dockIconPath: path.join(__dirname, "..", "assets", "naifrog-icon.png"),
       installRuntimeIcon: installRuntimeDockIcon,
     });
 

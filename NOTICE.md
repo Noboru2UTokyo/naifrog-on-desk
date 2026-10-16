@@ -97,3 +97,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Naifrog edition (2026-10-16)
+
+This distribution is maintained by Noboru2UTokyo and is based on Clawd on Desk v1.3.0 by rullerzhou-afk and its contributors. Source modifications remain under AGPL-3.0-only. The bundled naifrog theme is version 1.3.1, using project-supplied character footage and approved adapted animations. No claim of authorship of the underlying character is made. Upstream notices and asset licenses are retained.

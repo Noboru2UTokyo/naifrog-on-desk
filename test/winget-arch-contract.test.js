@@ -531,8 +531,8 @@ describe("winget contract installers-regex cross-check", () => {
 describe("winget contract helpers", () => {
   it("reads the Windows build config from package.json", () => {
     const build = readWindowsBuildConfig(pkg);
-    assert.equal(build.owner, "rullerzhou-afk");
-    assert.equal(build.repo, "clawd-on-desk");
+    assert.equal(build.owner, "Noboru2UTokyo");
+    assert.equal(build.repo, "naifrog-on-desk");
     assert.ok(build.entries.length >= 1);
   });
 

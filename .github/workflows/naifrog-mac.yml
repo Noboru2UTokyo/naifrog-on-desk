@@ -1,0 +1,59 @@
+name: Build Naifrog for Apple Silicon
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mac-arm64:
+    if: github.repository == 'Noboru2UTokyo/naifrog-on-desk'
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: node -e "require('node:assert/strict').equal(process.arch, 'arm64')"
+      - run: npm ci
+      - run: npm test
+      - run: npm run verify:release
+      - run: node scripts/validate-theme.js themes/naifrog
+      - run: npm run audit:assets
+      - run: npm audit --omit=dev
+      - name: Build ad-hoc signed, unnotarized DMG and ZIP
+        run: npm run build:mac:arm64 -- --publish never
+      - name: Verify packaged contents and native calls
+        run: |
+          node scripts/audit-packaged-native.js --app-root "dist/mac-arm64/Naifrog on Desk.app" --target darwin-arm64 --output dist/verification/native.json
+          node scripts/assert-no-retired-telegram-sidecar.js --resources-root "dist/mac-arm64/Naifrog on Desk.app/Contents/Resources" --output dist/verification/retirement.json
+          node scripts/run-packaged-koffi-smoke.js --executable "dist/mac-arm64/Naifrog on Desk.app/Contents/MacOS/Naifrog on Desk" --target darwin-arm64 --output dist/verification/koffi.json
+          node scripts/verify-naifrog-package.js --app-root "dist/mac-arm64/Naifrog on Desk.app" --artifact-root dist --output dist/verification/package.json
+          codesign --verify --deep --strict --verbose=2 "dist/mac-arm64/Naifrog on Desk.app"
+      - name: Check mounted DMG
+        run: |
+          mkdir -p "$RUNNER_TEMP/naifrog-dmg"
+          hdiutil attach -readonly -nobrowse -mountpoint "$RUNNER_TEMP/naifrog-dmg" dist/Naifrog-on-Desk-*-arm64.dmg
+          trap 'hdiutil detach "$RUNNER_TEMP/naifrog-dmg"' EXIT
+          node scripts/verify-naifrog-package.js --app-root "$RUNNER_TEMP/naifrog-dmg/Naifrog on Desk.app"
+          codesign --verify --deep --strict --verbose=2 "$RUNNER_TEMP/naifrog-dmg/Naifrog on Desk.app"
+      - name: Hash release files
+        run: |
+          cd dist
+          shasum -a 256 Naifrog-on-Desk-*-arm64.dmg Naifrog-on-Desk-*-arm64.zip > SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: naifrog-macos-arm64-unnotarized
+          compression-level: 0
+          path: |
+            dist/Naifrog-on-Desk-*-arm64.dmg
+            dist/Naifrog-on-Desk-*-arm64.zip
+            dist/*.blockmap
+            dist/latest-mac.yml
+            dist/SHA256SUMS.txt
+            dist/verification/*.json

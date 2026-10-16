@@ -272,3 +272,7 @@ Copilot CLI 同步走 `<COPILOT_HOME 或 ~/.copilot>/hooks/hooks.json`，marker-
 ## Do Not Revisit
 
 Language 子菜单底部截断是 Electron 透明窗口 + Windows DWM 的底层兼容问题。不要再尝试通过切换 `alwaysOnTop`、透明窗策略或 JS 菜单布局修它。
+
+## Naifrog distribution
+
+This fork ships the user-approved naifrog theme as the fresh-install default. Preserve existing saved theme choices. Keep package identity and updater URLs under Noboru2UTokyo/naifrog-on-desk. Do not register upstream clawd:// links. Shared upstream hook/runtime integration means only one edition should run at a time. See NAIFROG.md for the fork release flow; the upstream signing policy still applies to upstream releases. Do not regenerate character media during application packaging. Canonical shape remains themes/naifrog/reference/naifrog-canonical-original.jpg.

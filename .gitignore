@@ -173,3 +173,7 @@ Microsoft/
 
 # Emoji export scratch
 clawd-emoji-final/
+
+# Naifrog distribution release documentation and checks
+!docs/releases/release-v1.3.1.md
+!scripts/verify-naifrog-package.js

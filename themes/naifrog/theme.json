@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 1,
+  "name": "奶蛙 · 大笑伙伴",
+  "author": "Naifrog Desktop Pet",
+  "version": "1.3.1",
+  "description": "黄色奶蛙：原片惊鸿一瞥待机、爬行漫游、托腮思考、打字／翻资料／记笔记／电话／汇报／盖章六种自然工作动作与 12 秒大笑。保留 Permission 确认笑声，优化透明边缘。",
+  "viewBox": {
+    "x": 0,
+    "y": 0,
+    "width": 640,
+    "height": 640
+  },
+  "layout": {
+    "contentBox": {
+      "x": 80,
+      "y": 102,
+      "width": 480,
+      "height": 466
+    },
+    "centerX": 320,
+    "baselineY": 568,
+    "visibleHeightRatio": 0.7,
+    "baselineBottomRatio": 0.06
+  },
+  "objectScale": {
+    "widthRatio": 1,
+    "heightRatio": 1,
+    "offsetX": 0,
+    "offsetY": 0
+  },
+  "customization": {
+    "petTint": false
+  },
+  "eyeTracking": {
+    "enabled": false
+  },
+  "miniMode": {
+    "supported": false
+  },
+  "states": {
+    "idle": [
+      "idle.webp"
+    ],
+    "thinking": [
+      "thinking.webp"
+    ],
+    "working": [
+      "working.webp"
+    ],
+    "juggling": [
+      "working.webp"
+    ],
+    "attention": [
+      "happy.webp"
+    ],
+    "notification": [
+      "thinking.webp"
+    ],
+    "error": [
+      "thinking.webp"
+    ],
+    "carrying": [
+      "working.webp"
+    ],
+    "sweeping": [
+      "working.webp"
+    ],
+    "roam": [
+      "roam.webp"
+    ],
+    "yawning": [
+      "yawning.webp"
+    ],
+    "dozing": [
+      "dozing.webp"
+    ],
+    "collapsing": [
+      "collapsing.webp"
+    ],
+    "sleeping": [
+      "sleeping.webp"
+    ],
+    "waking": [
+      "waking.webp"
+    ]
+  },
+  "sleepSequence": {
+    "mode": "full"
+  },
+  "roamFlipAssets": false,
+  "workingTiers": [
+    {
+      "minSessions": 1,
+      "file": "working.webp"
+    }
+  ],
+  "displayHintMap": {
+    "clawd-idle-reading.svg": "work-reading.webp",
+    "clawd-working-debugger.svg": "work-notes.webp",
+    "clawd-working-thinking.svg": "thinking.webp"
+  },
+  "idleAnimations": [],
+  "hitBoxes": {
+    "default": {
+      "x": 210,
+      "y": 101,
+      "w": 232,
+      "h": 467
+    },
+    "sleeping": {
+      "x": 83,
+      "y": 319,
+      "w": 457,
+      "h": 249
+    },
+    "wide": {
+      "x": 75,
+      "y": 100,
+      "w": 490,
+      "h": 470
+    }
+  },
+  "fileHitBoxes": {
+    "collapsing.webp": {
+      "x": 83,
+      "y": 311,
+      "w": 474,
+      "h": 257
+    },
+    "dozing.webp": {
+      "x": 83,
+      "y": 310,
+      "w": 474,
+      "h": 258
+    },
+    "happy.webp": {
+      "x": 116,
+      "y": 77,
+      "w": 353,
+      "h": 491
+    },
+    "idle.webp": {
+      "x": 210,
+      "y": 101,
+      "w": 232,
+      "h": 467
+    },
+    "roam.webp": {
+      "x": 82,
+      "y": 306,
+      "w": 476,
+      "h": 262
+    },
+    "sleeping.webp": {
+      "x": 83,
+      "y": 319,
+      "w": 457,
+      "h": 249
+    },
+    "thinking.webp": {
+      "x": 205,
+      "y": 101,
+      "w": 230,
+      "h": 467
+    },
+    "waking.webp": {
+      "x": 83,
+      "y": 306,
+      "w": 474,
+      "h": 263
+    },
+    "work-notes.webp": {
+      "x": 147,
+      "y": 101,
+      "w": 297,
+      "h": 467
+    },
+    "work-phone.webp": {
+      "x": 204,
+      "y": 101,
+      "w": 232,
+      "h": 468
+    },
+    "work-reading.webp": {
+      "x": 167,
+      "y": 101,
+      "w": 277,
+      "h": 467
+    },
+    "work-report.webp": {
+      "x": 193,
+      "y": 99,
+      "w": 245,
+      "h": 470
+    },
+    "work-stamp.webp": {
+      "x": 146,
+      "y": 98,
+      "w": 300,
+      "h": 470
+    },
+    "work-typing.webp": {
+      "x": 152,
+      "y": 102,
+      "w": 291,
+      "h": 466
+    },
+    "working.webp": {
+      "x": 146,
+      "y": 98,
+      "w": 300,
+      "h": 471
+    },
+    "yawning.webp": {
+      "x": 83,
+      "y": 306,
+      "w": 474,
+      "h": 263
+    }
+  },
+  "sleepingHitboxFiles": [
+    "sleeping.webp"
+  ],
+  "transitions": {
+    "waking.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "thinking.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "happy.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "collapsing.webp": {
+      "in": 70,
+      "out": 70
+    },
+    "working.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "work-phone.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "yawning.webp": {
+      "in": 70,
+      "out": 70
+    },
+    "dozing.webp": {
+      "in": 70,
+      "out": 70
+    },
+    "work-typing.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "idle.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "work-reading.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "work-stamp.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "roam.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "work-report.webp": {
+      "in": 180,
+      "out": 180
+    },
+    "sleeping.webp": {
+      "in": 70,
+      "out": 70
+    },
+    "work-notes.webp": {
+      "in": 180,
+      "out": 180
+    }
+  },
+  "reactions": {
+    "clickLeft": {
+      "file": "happy.webp",
+      "duration": 12000
+    },
+    "clickRight": {
+      "file": "thinking.webp",
+      "duration": 4000
+    },
+    "double": {
+      "files": [
+        "happy.webp"
+      ],
+      "duration": 12000
+    },
+    "drag": {
+      "file": "idle.webp"
+    }
+  },
+  "sounds": {
+    "complete": "complete.mp3",
+    "confirm": "confirm.mp3"
+  },
+  "timings": {
+    "yawnDuration": 584,
+    "collapseDuration": 3250,
+    "wakeDuration": 3834,
+    "deepSleepTimeout": 90000,
+    "mouseIdleTimeout": 20000,
+    "mouseSleepTimeout": 60000,
+    "minDisplay": {
+      "attention": 12000,
+      "notification": 4000,
+      "error": 4000
+    },
+    "autoReturn": {
+      "attention": 12000,
+      "notification": 4000,
+      "error": 4000
+    }
+  },
+  "rendering": {
+    "lowPowerStaticImageOverrides": {
+      "idle": {
+        "from": "idle.webp",
+        "to": "idle-poster.png"
+      },
+      "thinking": {
+        "from": "thinking.webp",
+        "to": "thinking-poster.png"
+      },
+      "working": {
+        "from": "working.webp",
+        "to": "working-poster.png"
+      },
+      "juggling": {
+        "from": "working.webp",
+        "to": "working-poster.png"
+      },
+      "attention": {
+        "from": "happy.webp",
+        "to": "happy-poster.png"
+      },
+      "notification": {
+        "from": "thinking.webp",
+        "to": "thinking-poster.png"
+      },
+      "error": {
+        "from": "thinking.webp",
+        "to": "thinking-poster.png"
+      },
+      "carrying": {
+        "from": "working.webp",
+        "to": "working-poster.png"
+      },
+      "sweeping": {
+        "from": "working.webp",
+        "to": "working-poster.png"
+      },
+      "roam": {
+        "from": "roam.webp",
+        "to": "roam-poster.png"
+      },
+      "yawning": {
+        "from": "yawning.webp",
+        "to": "yawning-poster.png"
+      },
+      "dozing": {
+        "from": "dozing.webp",
+        "to": "dozing-poster.png"
+      },
+      "collapsing": {
+        "from": "collapsing.webp",
+        "to": "collapsing-poster.png"
+      },
+      "sleeping": {
+        "from": "sleeping.webp",
+        "to": "sleeping-poster.png"
+      },
+      "waking": {
+        "from": "waking.webp",
+        "to": "waking-poster.png"
+      }
+    }
+  }
+}

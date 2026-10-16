@@ -49,7 +49,7 @@ concurrency:
 env:
   # Single source of truth: the gate asserts our installer filenames match this,
   # and that nothing else in the release does.
-  INSTALLERS_REGEX: '^Clawd-on-Desk-Setup-.*-(x64|arm64)\.exe$'
+  INSTALLERS_REGEX: '^Naifrog-on-Desk-Setup-.*-(x64|arm64)\.exe$'
   # Every architecture the package promises. Distinctness alone would still let a
   # package.json edit that drops arm64 publish a single-architecture manifest.
   REQUIRED_ARCHITECTURES: "x64,arm64"
@@ -68,7 +68,7 @@ jobs:
     # `released` never fires for drafts or prereleases, but it DOES fire when an
     # already-published prerelease is edited into a release, and
     # workflow_dispatch can target any tag. The tag-shape check below closes both.
-    if: github.event_name == 'workflow_dispatch' || github.event.release.prerelease == false
+    if: github.repository == 'rullerzhou-afk/clawd-on-desk' && (github.event_name == 'workflow_dispatch' || github.event.release.prerelease == false)
     steps:
       - name: Resolve release tag
         id: release

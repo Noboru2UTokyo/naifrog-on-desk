@@ -17,6 +17,7 @@ permissions:
 
 jobs:
   validate-release:
+    if: github.repository == 'rullerzhou-afk/clawd-on-desk'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

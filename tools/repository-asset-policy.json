@@ -20,8 +20,8 @@
     "legal": "License or distribution notice with permanent retention requirements"
   },
   "thresholds": {
-    "trackedTreeWarningBytes": 52428800,
-    "trackedTreeHardBytes": 67108864,
+    "trackedTreeWarningBytes": 94371840,
+    "trackedTreeHardBytes": 110100480,
     "largeTrackedBinaryMediaBytes": 1048576,
     "duplicatePackagedPayloadWarningBytes": 262144,
     "artifactGrowthWarningBytes": 5242880,
@@ -116,6 +116,13 @@
       "owner": "build-release",
       "packaged": true,
       "retentionReason": "Canonical 512px runtime icon used by Linux packaging and served at the stable PWA icon URL."
+    },
+    {
+      "path": "assets/naifrog-icon.png",
+      "class": "runtime-required",
+      "owner": "build-release",
+      "packaged": true,
+      "retentionReason": "User-approved idle poster reused directly for the Naifrog application and Dock icon; no character generation."
     }
   ],
   "prHistoryAssetAllowlist": [],

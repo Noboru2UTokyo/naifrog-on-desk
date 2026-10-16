@@ -5,7 +5,7 @@ const fs = require("fs");
 const electron = require("electron");
 const { redactSecrets } = require("./secret-redact");
 
-const RELEASES_LATEST_URL = "https://github.com/rullerzhou-afk/clawd-on-desk/releases/latest";
+const RELEASES_LATEST_URL = "https://github.com/Noboru2UTokyo/naifrog-on-desk/releases/latest";
 const DEPENDENCY_INSTALL_TIMEOUT_MS = 10 * 60 * 1000;
 const UPDATE_ERROR_DETAIL_MAX_LENGTH = 8 * 1024;
 
@@ -691,7 +691,7 @@ function initUpdater(ctx, deps = {}) {
     return new Promise((resolve, reject) => {
       const req = httpsGet({
         hostname: "github.com",
-        path: "/rullerzhou-afk/clawd-on-desk/releases/latest",
+        path: "/Noboru2UTokyo/naifrog-on-desk/releases/latest",
         headers: {
           "User-Agent": "Clawd-on-Desk",
           Accept: "text/html,*/*",
@@ -728,7 +728,7 @@ function initUpdater(ctx, deps = {}) {
       if (lastReleaseEtag) headers["If-None-Match"] = lastReleaseEtag;
       const req = httpsGet({
         hostname: "api.github.com",
-        path: "/repos/rullerzhou-afk/clawd-on-desk/releases/latest",
+        path: "/repos/Noboru2UTokyo/naifrog-on-desk/releases/latest",
         headers,
       }, (res) => {
         // 304 Not Modified — drain and serve the cached release.

@@ -1,3 +1,52 @@
+# 奶蛙 on Desk · Naifrog on Desk
+
+开机就是奶蛙的 Clawd on Desk 分支，内置已完成的奶蛙主题，无需单独导入素材或配置生成 API。
+
+基于 [rullerzhou-afk/clawd-on-desk](https://github.com/rullerzhou-afk/clawd-on-desk) **v1.3.0**；当前应用版本 **1.3.1**，主题版本 **1.3.1**。保留上游多种 AI coding agent 状态感知与设置功能。
+
+<p align="center"><img src="themes/naifrog/assets/idle.webp" alt="奶蛙惊鸿一瞥待机" width="300"></p>
+
+## 下载与安装
+
+在 [Releases](https://github.com/Noboru2UTokyo/naifrog-on-desk/releases) 下载 `Naifrog-on-Desk-1.3.1-arm64.dmg`，适用于 Apple Silicon Mac（M1/M2/M3/M4 等）。打开 DMG，把 **Naifrog on Desk.app** 拖到 Applications，再启动。首次启动直接显示奶蛙。
+
+首版为 **ad-hoc 签名、未做 Apple 公证** 的构建。首次打开如被 macOS 拦截，请核对下载来源与 SHA256，再按系统「隐私与安全性」的提示自行决定是否打开；本项目不关闭 Gatekeeper。其他系统和架构是否可用，以该 Release 实际列出的文件及验证说明为准。
+
+同事使用动画和声音不需要 Alaya、MiniMax 或 OpenAI API Key。若要跟随 coding agent 状态，请在 Settings → Agents 中检查所用工具的集成；上游部分集成还需要本机 Node.js 与宿主工具自己的 hook 审核，详见[上游安装指南](docs/guides/setup-guide.md)。
+
+## 奶蛙的小动作
+
+- 待机：你指定的原片「惊鸿一瞥」，4 秒循环。
+- 思考：托腮、抱臂，按原设定保留身体比例。
+- 工作：打字、翻资料、记笔记、电话、汇报、盖章，32 秒轮换。
+- 完成／点击反应：原片大笑 12 秒。
+- 漫游：趴地爬行。保留入睡和醒来序列。
+- Permission：沿用短确认笑声；所有音频来自原片大笑变体。
+
+设置中仍可切换 Clawd、Calico、Cloudling 或导入其他主题。新安装默认奶蛙；已保存的主题选择不会被升级强行覆盖。
+
+## 与原版共存
+
+应用名称、bundle ID、偏好目录和更新仓库独立，安装不会替换 `Clawd on Desk.app`。**运行时请只开启一个版本**：仍沿用上游的 `~/.clawd` 状态发现与同一组 agent hooks，两版同时运行不属于隔离场景。此版不会接管原版 `clawd://` 链接；主题仍可在设置里导入。
+
+更新包仅从本仓库获取。首版未公证，建议从 Releases 手动下载安装更新；没有将自动更新成功列为已验证能力。
+
+## 开发与维护
+
+```sh
+npm ci
+npm test
+npm run verify:release
+npm run build:mac:arm64 -- --publish never
+```
+
+详见 [NAIFROG.md](NAIFROG.md)。`main` 保留上游同步线，`codex/naifrog-edition` 为当前发行分支。上游原始介绍与完整贡献者名单保留在 [README.upstream.md](README.upstream.md)。本分支维护：[@Noboru2UTokyo](https://github.com/Noboru2UTokyo)。
+
+应用代码遵循 [AGPL-3.0-only](LICENSE)，上游及素材归属见 [NOTICE.md](NOTICE.md)。
+
+<details>
+<summary>上游功能说明（原版下载与发行信息仅供参考）</summary>
+
 <p align="center">
   <img src="assets/icon.png" width="128" alt="Clawd">
 </p>
@@ -248,6 +297,9 @@ Clawd on Desk is a community-driven project. Bug reports, feature ideas, and pul
   </tr>
 </table>
 
+
+</details>
+
 ### Contributors
 
 Thanks to everyone who has helped make Clawd better:
@@ -411,7 +463,8 @@ Thanks to everyone who has helped make Clawd better:
     <td align="center" valign="top" width="110"><a href="https://github.com/jin-codes"><img src="https://github.com/jin-codes.png" width="50" style="border-radius:50%" /><br /><sub>jin-codes</sub></a></td>
     <td align="center" valign="top" width="110"><a href="https://github.com/LetitiaChan"><img src="https://github.com/LetitiaChan.png" width="50" style="border-radius:50%" /><br /><sub>LetitiaChan</sub></a></td>
     <td align="center" valign="top" width="110"><a href="https://github.com/sanzanazaman"><img src="https://github.com/sanzanazaman.png" width="50" style="border-radius:50%" /><br /><sub>sanzanazaman</sub></a></td>
-  </tr>
+      <td align="center" valign="top" width="110"><a href="https://github.com/Noboru2UTokyo"><img src="https://github.com/Noboru2UTokyo.png" width="50" style="border-radius:50%" /><br /><sub>Noboru2UTokyo</sub></a></td>
+</tr>
 </table>
 
 ## Acknowledgments

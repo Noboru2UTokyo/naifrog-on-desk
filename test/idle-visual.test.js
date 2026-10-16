@@ -27,6 +27,7 @@ function makeTheme(overrides = {}) {
 describe("listIdleVisualOptions", () => {
   it("keeps every shipped theme's candidate list unchanged without the new field", () => {
     const expected = {
+      naifrog: ["idle.webp"],
       calico: ["calico-idle-follow.svg", "calico-idle.apng"],
       clawd: ["clawd-idle-follow.svg", "clawd-idle-look.svg", "clawd-idle-bubble.svg", "clawd-idle-reading.svg"],
       cloudling: ["cloudling-idle.svg", "cloudling-idle-reading.svg"],

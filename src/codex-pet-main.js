@@ -348,6 +348,8 @@ function createCodexPetMain(options = {}) {
   }
 
   function registerProtocolClient() {
+    // This edition imports themes through Settings without claiming upstream URLs.
+    if (require("../package.json").name === "naifrog-on-desk") return false;
     try {
       if (app.isPackaged) {
         return app.setAsDefaultProtocolClient(CLAWD_PROTOCOL_SCHEME);
