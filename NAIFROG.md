@@ -5,7 +5,8 @@
 - Upstream: rullerzhou-afk/clawd-on-desk, v1.3.0 (54d359ef).
 - Distribution branch: codex/naifrog-edition. Keep main available for upstream synchronization.
 - Package/bundle: naifrog-on-desk / io.github.noboru2utokyo.naifrog-on-desk.
-- Application and theme versions: 1.4.0.
+- Application and theme versions: 1.4.1.
+- Edition lead, creative direction and release maintenance: Noboru2UTokyo. Upstream author and contributors remain separately credited in About, README and NOTICE.
 - The first-run preference is naifrog. Existing selected themes are preserved.
 - Published assets and updater endpoints belong only to Noboru2UTokyo/naifrog-on-desk.
 - Internal upstream hook markers and ~/.clawd are intentionally retained. Run only one edition at a time.

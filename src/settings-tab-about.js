@@ -138,7 +138,7 @@
   // cache; the dynamic ones must be re-fetched on every render so the
   // pending hint and the auto-update toggle reflect current state after
   // the user flips the toggle or the scheduler discovers a new version.
-  const STATIC_ABOUT_KEYS = ["repoUrl", "license", "copyright", "authorName", "authorUrl", "heroSvgContent"];
+  const STATIC_ABOUT_KEYS = ["repoUrl", "editionAuthorName", "editionAuthorUrl", "upstreamRepoUrl", "license", "copyright", "authorName", "authorUrl", "heroSvgContent"];
   function fetchAboutInfo() {
     if (!window.settingsAPI || typeof window.settingsAPI.getAboutInfo !== "function") {
       return Promise.resolve(runtime.about.infoCache || null);
@@ -301,7 +301,11 @@
 
     const crabWrap = document.createElement("div");
     crabWrap.className = "about-crab-wrap";
-    crabWrap.title = "Clawd";
+    crabWrap.title = "Naifrog on Desk";
+    const portrait = document.createElement("img");
+    portrait.src = "../themes/naifrog/assets/idle-poster.png";
+    portrait.alt = "Naifrog";
+    crabWrap.appendChild(portrait);
 
     const title = document.createElement("h2");
     title.className = "about-title";
@@ -315,6 +319,21 @@
     hero.appendChild(title);
     hero.appendChild(tagline);
     parent.appendChild(hero);
+
+    const editionCredit = document.createElement("section");
+    editionCredit.className = "about-edition-credit";
+    const creditLabel = document.createElement("div");
+    creditLabel.className = "about-edition-label";
+    creditLabel.textContent = t("aboutEditionLeadLabel");
+    const creditAuthor = document.createElement("a");
+    creditAuthor.className = "about-edition-author";
+    creditAuthor.href = "#";
+    const creditDescription = document.createElement("p");
+    creditDescription.textContent = t("aboutEditionContribution");
+    editionCredit.appendChild(creditLabel);
+    editionCredit.appendChild(creditAuthor);
+    editionCredit.appendChild(creditDescription);
+    parent.appendChild(editionCredit);
 
     const infoSection = document.createElement("section");
     infoSection.className = "section";
@@ -384,9 +403,11 @@
     fetchAboutInfo().then((info) => {
       const safe = info || {};
 
-      if (safe.heroSvgContent) {
-        crabWrap.innerHTML = safe.heroSvgContent;
-      }
+      creditAuthor.textContent = safe.editionAuthorName || "Noboru2UTokyo";
+      creditAuthor.addEventListener("click", (event) => {
+        event.preventDefault();
+        helpers.openExternalSafe(safe.editionAuthorUrl || "https://github.com/Noboru2UTokyo");
+      });
       crabWrap.addEventListener("click", () => handleAboutCrabClick(crabWrap));
 
       infoSection.innerHTML = "";
@@ -568,6 +589,12 @@
         lRow.appendChild(ll);
         lRow.appendChild(lv);
         infoSection.appendChild(lRow);
+      }
+
+      if (safe.upstreamRepoUrl) {
+        infoSection.appendChild(buildAboutLinkRow(
+          t("aboutUpstreamRepositoryLabel"), safe.upstreamRepoUrl, "Clawd on Desk"
+        ));
       }
 
       if (safe.authorName) {

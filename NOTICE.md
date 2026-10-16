@@ -100,4 +100,10 @@ SOFTWARE.
 
 ## Naifrog edition (2026-10-16)
 
-This distribution is maintained by Noboru2UTokyo and is based on Clawd on Desk v1.3.0 by rullerzhou-afk and its contributors. Source modifications remain under AGPL-3.0-only. The bundled naifrog theme is version 1.3.1, using project-supplied character footage and approved adapted animations. No claim of authorship of the underlying character is made. Upstream notices and asset licenses are retained.
+Naifrog on Desk is a community distribution initiated, creatively directed and maintained by **Noboru2UTokyo** (https://github.com/Noboru2UTokyo). Contributions to this edition include product direction, source-media selection, character consistency requirements, animation choreography and loop design, review of matting and transitions, state mappings, the yellow-and-green interface, acceptance testing, packaging and release maintenance. Implementation and adapted media were developed with AI assistance under that direction.
+
+奶蛙版由 **Noboru2UTokyo 发起、主导设计并维护**，贡献包括产品规划、原始素材选用、角色形象统一、动画动作与循环设计、抠图与过渡打磨、状态映射、黄绿界面、验收及发行维护。代码实现和适配素材制作使用了 AI 辅助。
+
+This edition is based on **Clawd on Desk v1.3.0 by rullerzhou-afk (Ruller_Lulu / 鹿鹿) and its contributors**. The original application, integration infrastructure and upstream contributions retain their attribution. Source modifications remain under AGPL-3.0-only; see LICENSE and README.upstream.md.
+
+The bundled Naifrog theme uses project-supplied source footage and approved adapted animations. Edition credits describe adaptation and creative direction; they do not assert authorship or ownership of the underlying Naifrog character or original media. Those rights remain with their respective rights holders. Upstream notices and asset licenses are retained.

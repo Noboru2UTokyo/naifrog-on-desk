@@ -1108,8 +1108,11 @@ function registerSettingsIpc(options = {}) {
     } catch {}
     return {
       version: app.getVersion(),
-      repoUrl: "https://github.com/rullerzhou-afk/clawd-on-desk",
-      license: "AGPL-3.0",
+      repoUrl: "https://github.com/Noboru2UTokyo/naifrog-on-desk",
+      editionAuthorName: "Noboru2UTokyo",
+      editionAuthorUrl: "https://github.com/Noboru2UTokyo",
+      upstreamRepoUrl: "https://github.com/rullerzhou-afk/clawd-on-desk",
+      license: "AGPL-3.0-only",
       copyright: "\u00a9 2026 Ruller_Lulu",
       authorName: "Ruller_Lulu / \u9e7f\u9e7f",
       authorUrl: "https://github.com/rullerzhou-afk",

@@ -1,7 +1,7 @@
 {
   "name": "naifrog-on-desk",
-  "version": "1.4.0",
-  "description": "Naifrog edition of Clawd on Desk, with the animated milk frog built in.",
+  "version": "1.4.1",
+  "description": "Naifrog on Desk — a Clawd community edition led, designed and maintained by Noboru2UTokyo.",
   "main": "src/main.js",
   "scripts": {
     "start": "node launch.js",
@@ -81,7 +81,10 @@
     "electron",
     "claude-code"
   ],
-  "author": "rullerzhou-afk",
+  "author": {
+    "name": "Noboru2UTokyo",
+    "url": "https://github.com/Noboru2UTokyo"
+  },
   "license": "AGPL-3.0-only",
   "type": "commonjs",
   "build": {
@@ -128,7 +131,7 @@
       ]
     },
     "linux": {
-      "maintainer": "rullerzhou-afk <rullerzhou-afk@users.noreply.github.com>",
+      "maintainer": "Noboru2UTokyo",
       "icon": "assets/icons",
       "category": "Utility",
       "artifactName": "Naifrog-on-Desk-${version}-${arch}.${ext}",
@@ -221,5 +224,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Noboru2UTokyo/naifrog-on-desk.git"
-  }
+  },
+  "contributors": [
+    {
+      "name": "rullerzhou-afk (original Clawd on Desk)",
+      "url": "https://github.com/rullerzhou-afk"
+    }
+  ]
 }

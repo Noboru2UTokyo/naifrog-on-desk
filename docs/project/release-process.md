@@ -651,3 +651,12 @@ Naifrog fork, based on the released upstream v1.3.0 code. Release tag `v1.3.3`.
 - Keep original idle, 12-second laughter and sounds unchanged.
 - Confirm yellow/green application surfaces and the local running theme.
 - Mount the actual DMG, audit native files, run the packaged Koffi call and verify ad-hoc signature integrity; notarization remains unavailable.
+
+### v1.4.1 Draft Smoke Checklist
+
+- Confirm the packaged app shows `1.4.1` metadata and Settings → About shows `v1.4.1`.
+- Confirm the edition lead Noboru2UTokyo is prominent, with separate original Clawd author and upstream repository credits in all seven locales.
+- Confirm every animation, poster, reference image and sound matches v1.4.0 byte for byte; only theme metadata and documentation change.
+- Run the fork checks in NAIFROG.md, including full tests, release contract, theme validation, asset audit, native package audit and packaged Koffi smoke.
+- Mount the actual DMG, verify its contents and signature integrity, install locally and inspect About.
+- Verify release asset checksums and the downloaded DMG. Retain the unnotarized status and explicit untested platform/update matrix.
